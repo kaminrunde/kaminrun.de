@@ -29,6 +29,10 @@
     font-size: 1em;
 }
 
+span.obscure {
+    display: none;
+}
+
 .footer {
     text-align: center;
 }

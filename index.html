@@ -31,8 +31,18 @@
         <link rel="stylesheet" href="css/styles.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <script type="text/javascript">
+            function entschwurbel() {
+                var tempElem, tempText = '';
+                tempElem = document.getElementById('verschwurbmail');
+                tempText = tempElem.href.replace('x','');
+                tempElem.href = tempText;
+            }
+        </script>
+
     </head>
-    <body>
+    <body onload="entschwurbel()">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -40,10 +50,17 @@
         <!-- Add your site or application content here -->
         <div class="banner">
             <h1 class="banner-head"><img src="img/logo.png" alt="Kaminrun.de Logo"><br/>Kaminrun.de</h1>
-            <p class="banner-subhead">Wir arbeiten nur auf Empfehlungsbasis – hochwertig, agil und gewissenhaft.</br>Haben Sie Fragen zu unserer Arbeit? <a href="mailto:info@kaminrun.de">Dann schreiben Sie uns</a>.</p>
+            <p class="banner-subhead">Wir arbeiten nur auf Empfehlungsbasis – hochwertig, agil und gewissenhaft.</br>Haben Sie Fragen zu unserer Arbeit? <a id="verschwurbmail" href="mailto:info@kamixnrun.de">Dann schreiben Sie uns</a>.</p>
         </div>
 
         <div class="footer">
+            <p>
+                Impressum:<br/>
+                Kamin<span class="obscure">ox</span>run.de UG (haftungsbeschränkt)<br/>
+                Geschäftsführer: Ol<span class="obscure">ob</span>iver Sai<span class="obscure">bol</span>ler<br/>
+                Baue<span class="obscure">ob2</span>rnstr. 36, 86<span class="obscure">pl</span>36<span class="obscure">z3</span>8 Ger<span class="obscure">man</span>sthofen<br/>
+                Sitz: Aug<span class="obscure">ust</span>sburg, HRB 3<span class="obscure">ne</span>04<span class="obscure">ob</span>67
+            </p>
             <p class="l-box">
                 <a href="https://plus.google.com/101054815152844841592" rel="publisher">Google+</a>
             </p>
