@@ -29,6 +29,10 @@
     font-size: 1em;
 }
 
+.banner a h1 {
+    color: #000;
+}
+
 span.obscure {
     display: none;
 }
