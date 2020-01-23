@@ -1,0 +1,9 @@
+[build]
+  command = ""
+  publish = "./"
+
+[[redirects]]
+  from = "https://kaminrun-de.netlify.com/*"
+  to = "https://kaminrun.de/:splat"
+  status = 301
+  force = true
