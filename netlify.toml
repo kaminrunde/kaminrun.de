@@ -2,6 +2,11 @@
   command = ""
   publish = "./"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "interest-cohort=()"
+
 [[redirects]]
   from = "https://kaminrun-de.netlify.com/*"
   to = "https://kaminrun.de/:splat"
