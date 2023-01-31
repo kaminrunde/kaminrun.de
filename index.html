@@ -1,109 +1,321 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Kaminrun.de</title>
-    <meta name="description" content="kaminrunde Datenschutzerklärung">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts -->
+    <title>Kaminrun.de</title>
+    <meta name="description" content="Wir arbeiten hochwertig, agil und gewissenhaft.">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+
     <style>
-        /* latin-ext */
-
-        @font-face {
-            font-family: 'Bitter';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Bitter Bold'), local('Bitter-Bold'), url(fonts/rax_HiqOu8IVPmnzxKl8DRhfo0s.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-
-        /* latin */
-
-        @font-face {
-            font-family: 'Bitter';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Bitter Bold'), local('Bitter-Bold'), url(fonts/rax_HiqOu8IVPmnzxKl8Axhf.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        body {
-            font-family: 'Bitter', serif;
+        span.obscure {
+            display: none;
         }
     </style>
-
-    <!-- 
-        Pure, http://purecss.io/
-        A set of small, responsive CSS modules that you can use in every web project.
-        -->
-    <link rel="stylesheet" href="css/vendor/pure-1.0.0-min.css">
-
-    <link rel="stylesheet" href="css/styles.css">
-
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
     <script type="text/javascript">
         function entschwurbel() {
             var tempElem, tempText = '';
             tempElem = document.getElementById('verschwurbmail');
-            tempText = tempElem.href.replace('x', '');
-            tempElem.href = tempText;
+            if (tempElem) {
+                tempText = tempElem.href.replace('x', '');
+                tempElem.href = tempText;
+            }
         }
     </script>
-
 </head>
 
-<body onload="entschwurbel()">
-    <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div id="layout">
-        <div id="main">
-            <div class="banner">
-                <a href="index.html">
-                    <h1 class="banner-head">
-                        <img src="img/logo.png" alt="Kaminrun.de Logo">
-                        <br/>Kaminrun.de
-                    </h1>
-                </a>
-                <p class="banner-subhead">Wir arbeiten nur auf Empfehlungsbasis – hochwertig, agil und gewissenhaft.</br>Haben Sie Fragen zu unserer Arbeit? <a id="verschwurbmail" href="mailto:info@kamixnrun.de">Dann schreiben Sie uns</a>.</p>
+<body class="bg-gray-900 font-body text-white" onload="entschwurbel()">
+
+    <header class="md:fixed top-5 md:top-40 w-full md:h-4/6">
+        <div class="flex py-5 md:py-16 items-center lg:w-4/5 px-5 lg:px-0 max-w-7xl mx-auto">
+            <nav class="border-r-8 md:border-r-[15px] border-orange mr-10 pr-10 xl:mr-40 xl:pr-40 md:w-48">
+                <ul>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#about"><span
+                                class=" border-r-2 border-white pr-2 mr-2">10</span>about</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#projects"><span
+                                class=" border-r-2 border-white pr-2 mr-2">20</span>projects</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#team"><span
+                                class=" border-r-2 border-white pr-2 mr-2">30</span>team</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#manifesto"><span
+                                class=" border-r-2 border-white pr-2 mr-2">40</span>manifesto</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#methods"><span
+                                class=" border-r-2 border-white pr-2 mr-2">50</span>methods</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex mb-2 md:mb-5"><a href="#intouch"><span
+                                class=" border-r-2 border-white pr-2 mr-2">60</span>in touch</a></li>
+                    <li class="text-sm md:text-xl w-24 md:w-36 flex"><a href="#imprint"><span
+                                class=" border-r-2 border-white pr-2 mr-2">80</span>imprint</a></li>
+                </ul>
+            </nav>
+            <div class="opacity-50"><a href="/"><img src="images/logo.svg"></a></div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="bg-gray-800 md:mt-[550px] py-20">
+            <div class="lg:w-4/5 px-5 lg:px-0 max-w-7xl mx-auto flex flex-col gap-y-36">
+
+                <article id="about" title="1 col">
+                    <div class="md:flex bg-gray-800">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            10</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Kaminrunde + Freunde</strong>
+                            <h3 class="text-xl md:text-3xl">Hochwertig.Agil.Gewissenhaft</h3>
+                            <p class="mt-10">Die Kaminrunde & Freunde, das sind bodenständige, gleichgesinnte
+                                Expert*innen aus verschiedenen Disziplinen des modernen E-Commerce, Tech & Data Stack,
+                                die gemeinsam E-Commerce-Projekte und Produkte entwickeln und betreiben.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="projects" title="2 col">
+                    <div class="md:flex">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            20</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Projects</strong>
+                            <h3 class="text-xl md:text-3xl">Entspannt(er).Online.Handel(n)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10 mt-10">
+
+                                <div>
+                                    <div class="bg-gray-400 h-56 p-5 flex items-center justify-center"><a
+                                            href="https://www.wundercurves.de"><img src="images/wundercurves.png"></a>
+                                    </div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2"><a
+                                            href="https://www.wundercurves.de">Wundercurves.de</a></h5>
+                                    <p>Sich schön zu fühlen, darf nicht abhängig von einer Konfektionsgröße sein:
+                                        Wundercurves.de ist eine erfolgreiche Shopping-Plattform für Plus Size Fashion
+                                        und bündelt alle Angebote für Mode in großen Größen auf einer Seite - dabei
+                                        immer stark community- und contentbasiert, mit Fokus auf allen Themen, die
+                                        Relevanz für die kurvige Frau haben.</p>
+                                </div>
+
+                                <div>
+                                    <div class="bg-gray-400 h-56 p-5 flex items-center justify-center"><a
+                                            href="https://www.vegwizer.de"></a><img src="images/vegwizer.svg"></a></div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2"><a
+                                            href="https://www.vegwizer.de">Vegwizer</a></h5>
+                                    <p>Vegwizer bietet dir die beste Auswahl an veganen Produkten. Wir bündeln auf nur
+                                        einer Seite die spannendsten und besten Shops & Marken für vegane Produkte - von
+                                        Klamotten über Sneaker und Portemonnaies bis hin zu Lebensmitteln,
+                                        Haushaltsprodukten uvm. - lass dich überraschen!</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="team" title="3 col">
+                    <div class="md:flex">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            30</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Team</strong>
+                            <h3 class="text-xl md:text-3xl">Grey-Beard Experts and inspired fresh blood</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 gap-10 mt-10">
+
+                                <div>
+                                    <div class="bg-gray-400 h-80 flex items-center justify-center overflow-hidden"><!--img
+                                            class="object-cover w-full h-full grayscale" src="images/nane.jpeg"--></div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2">Christiane Seitz</h5>
+                                    <p>Herzblut-Wundercurves-Mutti und Fuchs in allen Content- und Productmanagementthemen, dabei immer detailverliebt, nutzerfokussiert und mit tausend Bällen jonglierend.</p>
+                                </div>
+
+                                <div>
+                                    <div class="bg-gray-400 h-80 flex items-center justify-center overflow-hidden"><img
+                                            class="object-cover w-full h-full grayscale" src="images/matthias.jpeg">
+                                    </div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2">Matthias Geisler</h5>
+                                    <p>Graubart. Familienmensch. Hier Hausmeister. Immer an allem schuld. Technischer
+                                        Architekt mit Spaß an Dev & Ops für Web/ Mobile/ *nix. #einfachMachen</p>
+                                </div>
+
+                                <div>
+                                    <div class="bg-gray-400 h-80 flex items-center justify-center overflow-hidden"><!--img
+                                            class="object-cover w-full h-full grayscale" src="images/max.jpeg"--></div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2">Markus Miller</h5>
+                                    <p>Jetzt wieder langhaariger Skatepunk Addict und very senior, datadriven SEO and Analytics- Evangelist</p>
+                                </div>
+
+                                <div>
+                                    <div class="bg-gray-400 h-80 flex items-center justify-center overflow-hidden"><!--img
+                                            class="object-cover w-full h-full grayscale" src="images/simon.jpeg"--></div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2">Simon Metzner</h5>
+                                    <p>UX-Veteran des ersten dotCom Booms, advokat des Users mit Hang zu wertschätzender Kommunikation in allen belangen des UI.</p>
+                                </div>
+
+                                <div>
+                                    <div class="bg-gray-400 h-80 flex items-center justify-center overflow-hidden"><!--img
+                                            class="object-cover w-full h-full grayscale" src="images/freunde.jpeg"--></div>
+                                    <h5 class="font-bold text-2xl mt-5 mb-2">…und Freunde</h5>
+                                    <p>Jessica, Manu, Paul, Dustin, Tino, Stephan.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="manifesto" title="1 col">
+                    <div class="md:flex bg-gray-800">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            30</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Manifesto</strong>
+                            <h3 class="text-xl md:text-3xl">… 🙀</h3>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="methods" title="1 col">
+                    <div class="md:flex bg-gray-800">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            30</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Methods</strong>
+                            <h3 class="text-xl md:text-3xl">… 🙀</h3>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="intouch" title="1 col">
+                    <div class="md:flex bg-gray-800">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            10</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">In Touch</strong>
+                            <h3 class="text-xl md:text-3xl">Haben Sie Fragen
+                                zu unserer Arbeit?</h3>
+                            <p class="mt-10"><a id="verschwurbmail" href="mailto:kontakt@kaminrun.de">Dann
+                                    schreiben Sie uns</a>.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="imprint" title="2 col">
+                    <div class="md:flex">
+                        <div
+                            class="text-6xl md:text-[120px] font-bold text-gray-400 md:w-48 pb-5 mb-5 border-b-8 md:border-b-0 md:border-r-[15px] border-orange md:mr-10 md:pr-10 xl:mr-40 xl:pr-40  max-h-44">
+                            80</div>
+                        <div class="relative z-10 bg-gray-800">
+                            <strong class="font-display text-orange text-3xl md:text-5xl">Impressum</strong>
+                            <h3 class="text-xl md:text-3xl"></h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10 mt-10">
+
+                                <div>
+                                    <p>
+                                        <br /> <strong>Kamin<span class="obscure">ox</span>runde &amp; Freunde
+                                            GmbH</strong>
+                                        <br /> Geschäftsführer: Ma<span class="obscure">ob</span>tthias Gei<span
+                                            class="obscure">bol</span>sler
+                                        <br /> Flo<span class="obscure">sdf</span>rian-Wen<span
+                                            class="obscure">sdf</span>genmayr-Str. 34,
+                                        86<span class="obscure">pl</span>6<span class="obscure">z3</span>09 Don<span
+                                            class="obscure">man</span>auw&ouml;rth
+                                        <br /> Registergericht: Amtsgericht Aug<span class="obscure">ust</span>sburg,
+                                        Registernummer: HRB
+                                        3<span class="obscure">ne</span>74<span class="obscure">ob</span>58
+                                        <br /> Umsatzsteuer-Identifikationsnummer (UST-IdNr.) gem. § 27a UStG: DE<span
+                                            class="obscure">us</span>352<span class="obscure">ste</span>518<span
+                                            class="obscure">bgt</span>530
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p>
+                                        <br /> <strong>Kamin<span class="obscure">ox</span>run.de UG
+                                            (haftungsbeschränkt)</strong>
+                                        <br /> Geschäftsführer: Ol<span class="obscure">ob</span>iver Sai<span
+                                            class="obscure">bol</span>ler
+                                        <br /> Mat<span class="obscure">sdf</span>hild<span
+                                            class="obscure">sdf</span>enstr. 6, 86<span class="obscure">pl</span>1<span
+                                            class="obscure">z3</span>52 Aug<span class="obscure">man</span>sburg
+                                        <br /> Registergericht: Amtsgericht Aug<span class="obscure">ust</span>sburg,
+                                        Registernummer: HRB
+                                        3<span class="obscure">ne</span>04<span class="obscure">ob</span>67
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
+        </div>
 
-            <div class="content">
+    </main>
 
-                <h2 class="content-subhead">Impressum</h2>
-                <p>
-                    <br/> Kamin<span class="obscure">ox</span>runde &amp; Freunde GmbH
-                    <br/> Geschäftsführer: Ma<span class="obscure">ob</span>tthias Gei<span class="obscure">bol</span>sler
-                    <br/> Flo<span class="obscure">sdf</span>rian-Wen<span class="obscure">sdf</span>genmayr-Str. 34, 86<span class="obscure">pl</span>6<span class="obscure">z3</span>09 Don<span class="obscure">man</span>auw&ouml;rth
-                    <br/> Registergericht: Amtsgericht Aug<span class="obscure">ust</span>sburg, Registernummer: HRB 3<span class="obscure">ne</span>74<span class="obscure">ob</span>58
-                    <br/> Umsatzsteuer-Identifikationsnummer (UST-IdNr.) gem. § 27a UStG: DE<span class="obscure">us</span>352<span class="obscure">ste</span>518<span class="obscure">bgt</span>530
+    <footer class="bg-gray-900">
+        <div class="lg:w-4/5 px-5 lg:px-0 max-w-7xl mx-auto md:flex gap-20 py-20 text-sm text-gray-500">
+            <div class="mb-10 md:mb-0">
+                <strong>Datenschutzerklärung</strong>
+                <p>Der Betreiber diese Webseite nimmt den Schutz Ihrer personenbezogenen Daten und die Beachtung der
+                    anwendbaren
+                    Datenschutzgesetze, insbesondere die Europäische Datenschutz-Grundverordnung (DGSVO) und das
+                    Bundesdatenschutzgesetz
+                    (BDSG), sehr ernst.
                 </p>
-                <p>
-                    <br/> Kamin<span class="obscure">ox</span>run.de UG (haftungsbeschränkt)
-                    <br/> Geschäftsführer: Ol<span class="obscure">ob</span>iver Sai<span class="obscure">bol</span>ler
-                    <br/> Mat<span class="obscure">sdf</span>hild<span class="obscure">sdf</span>enstr. 6, 86<span class="obscure">pl</span>1 <span class="obscure">z3</span>52 Aug<span class="obscure">man</span>sburg
-                    <br/> Registergericht: Amtsgericht Aug<span class="obscure">ust</span>sburg, Registernummer: HRB 3<span class="obscure">ne</span>04<span class="obscure">ob</span>67
-                </p>
-            </div>
+                <p>Die nachfolgende Erklärung gibt Ihnen einen Überblick darüber, wie der Betreiber diesen Schutz
+                    gewährleistet,
+                    welche Art von Daten zu welchem Zweck erhoben werden und wie wir diese verarbeiten.</p>
 
-            <div class="footer">
-                <p class="l-box">
-                    <a href="privacy.html" rel="publisher">Datenschutz</a>
+                <br /><strong>Verantwortliche Stelle</strong>
+                <p>Die Verantwortliche Stelle für die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten
+                    im Sinne
+                    des Bundesdatenschutzgesetzes (BDSG) entnehmen Sie bitte der entsprechenden Angaben im Impressum.
+                </p>
+                <br /><strong>Erheben, Speichern und Verwenden personenbezogener Daten</strong>
+
+                <p>Sie können unsere Webseiten besuchen, ohne Angaben zu Ihrer Person zu machen. Wir speichern in diesem
+                    Zusammenhang keinerlei persönliche Daten.</p>
+
+                <p>Um unser Angebot zu verbessern, werten wir lediglich statistische Daten aus (Nutzungsdaten in so
+                    genannten Server-Log-Files), die keinen Rückschluss auf Ihre Person erlauben.</p>
+
+                <p>Dies sind im wesentlichen Daten, die Ihr Browser (oder HTTP Client) automatisch an uns übermittelt
+                    (Angaben zum User Agent z.B. Name und Version des Browsers, das verwendete Betriebssystem, die
+                    Referrer URL, Hostname des zugreifenden Rechners, IP Adresse und Uhrzeit der Serveranfrage).</p>
+
+                <p>Diese Webseiten verwenden keine Cookies und keine Social Media Plugins.</p>
+
+                <br /><strong>Datenerhebung unter strenger Beachtung der Gesetze</strong>
+                <p>Bei der Erhebung, dem Verwenden und Speichern von personenbezogenen Daten beachten wir die
+                    Vorschriften des
+                    Bundesdatenschutzgesetzes (BDSG), des Telemediengesetzes (TMG) und ggf. weiterer anwendbarer
+                    Datenschutzbestimmungen.
+                    Alle Nutzungsdaten aus Server-Log-Files werden unter Beachtung der einschlägigen Vorschriften des
+                    Bundesdatenschutzgesetzes
+                    (BDSG) und des Telemediengesetzes (TMG) von uns gespeichert und verarbeitet.</p>
+
+                <br /><strong>Auskunft, Löschung, Sperrung</strong>
+                <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten Daten sowie das
+                    Recht auf
+                    Berichtigung, Löschung bzw. Sperrung. Wenden Sie sich hierzu bitte an die im Impressum angegebene
+                    Kontaktadresse. Wir stehen Ihnen jederzeit gern für
+                    weitergehende Fragen zu
+                    unseren Hinweisen zum Datenschutz und zur Verarbeitung Ihrer persönlichen Daten zur Verfügung.
                 </p>
             </div>
         </div>
-    </div>
+
+    </footer>
+
 </body>
 
 </html>
