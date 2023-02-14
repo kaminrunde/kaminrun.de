@@ -14,13 +14,6 @@ dev:
 build:
 	npm run build
 
-dist/css/main.css:
-	npx tailwindcss -i src/css/main.css -o dist/css/main.css
-
-.PHONY: watch
-compile-watch:
-	npx tailwindcss -i src/css/main.css -o dist/css/main.css --watch
-
 .PHONY: clean
 clean:
-	rm -rf node_modules
+	rm -rf dist node_modules
