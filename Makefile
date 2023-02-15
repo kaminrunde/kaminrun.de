@@ -16,4 +16,4 @@ build:
 
 .PHONY: clean
 clean:
-	rm -rf dist node_modules
+	rm -rf dist node_modules .parcel-cache
