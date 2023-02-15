@@ -10,6 +10,7 @@
 
     <title>Kaminrun.de</title>
     <meta name="description" content="Wir arbeiten hochwertig, agil und gewissenhaft.">
+    <link href="../node_modules/aos/dist/aos.css" rel="stylesheet" />
     <link href="./css/fonts.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
 
@@ -57,7 +58,8 @@
                                 class=" border-r-2 border-white pr-2 mr-2">50</span>imprint</a></li>
                 </ul>
             </nav>
-            <div id="logo" class="opacity-50"><a href="/"><img src="images/logo.svg"></a></div>
+            <div id="logo" class="opacity-50" data-aos="disapear" data-aos-duration="4000" data-aos-easing="ease-in-out" data-aos-anchor="#about"><a href="/"><img
+                        src="images/logo.svg"></a></div>
         </div>
     </header>
 
@@ -306,53 +308,22 @@
 
     </footer>
 
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <style>
+        /*  Animation starts here */
+        [data-aos='disapear'] {
+            opacity: 0.5;
+            transition-property: opacity;
+        }
+
+        /*  Animation ends here */
+        [data-aos='disapear'].aos-animate {
+            opacity: 0;
+        }
+    </style>
     <script>
-        const logoEl = document.querySelector("#logo");
-        const mainEl = document.querySelector("main");
-        const footerEl = document.querySelector("footer");
-        let logoVisible = true;
-
-        const onChangeMain = function (changes, observer) {
-            changes.forEach(change => {
-                // console.log("onChangeMain", change);
-
-                // if (change.intersectionRatio > 0) {}
-                if (logoVisible) {
-                    logoEl.classList.remove("opacity-50");
-                    logoEl.classList.add("opacity-0");
-                    logoVisible = false;
-                } else {
-                    logoEl.classList.remove("opacity-0");
-                    logoEl.classList.add("opacity-50");
-                    logoVisible = true;
-                }
-            });
-        };
-        const onChangeFooter = function (changes, observer) {
-            changes.forEach(change => {
-                // console.log("onChangeFooter", change);
-
-                // if (change.intersectionRatio > 0) {}
-                if (logoVisible) {
-                    logoEl.classList.remove("opacity-50");
-                    logoEl.classList.add("opacity-0");
-                    logoVisible = false;
-                }
-            });
-        };
-        
-        const options = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px', // top, right, bottom, left
-            threshold: 0.1
-        };
-        const mainObserver = new IntersectionObserver(onChangeMain, options);
-        mainObserver.observe(mainEl);
-
-        const footerObserver = new IntersectionObserver(onChangeFooter, options);
-        footerObserver.observe(footerEl);
+        AOS.init();
     </script>
-
 </body>
 
 </html>
