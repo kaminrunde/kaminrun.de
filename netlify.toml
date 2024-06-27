@@ -13,3 +13,15 @@
   to = "https://kaminrun.de/:splat"
   status = 301
   force = true
+
+ [[redirects]]
+  from = "https://kaminrun.de/index.html"
+  to = "https://kaminrun.de/"
+  status = 301
+  force = true
+
+ [[redirects]]
+  from = "https://kaminrun.de/privacy.html"
+  to = "https://kaminrun.de/"
+  status = 302
+  force = true
