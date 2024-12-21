@@ -32,21 +32,16 @@
         }
     </script>
 
-    <!-- Matomo -->
+    <!-- PostHog -->
     <script>
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "https://mtm.kaminrun.de/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '2']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
-        })();
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_hLKODaQSmBT3v9ZSSVPRcYY19bmqQVwfwc8UAXY2ukP', {
+            api_host: 'https://kaminrun.de/phingest',
+            ui_host: 'https://eu.posthog.com',
+            persistence: 'memory',
+        })
     </script>
-    <!-- End Matomo Code -->
+    <!-- End PostHog Code -->
 </head>
 
 <body class="bg-gray-900 font-body text-white" onload="entschwurbel()">
@@ -385,15 +380,14 @@
                             Referrer URL, Hostname des zugreifenden Rechners, IP Adresse und Uhrzeit der Serveranfrage).
                         </p>
 
-                        <p>Zudem nutzen wir das Webanalysetool <i>Matomo</i> (ehemals Piwik) zur Optimierung unserer
-                            Webseite.</p>
 
-                        <p>Dabei betreiben wir Matomo selbst (On-Premise, Self-Hosted) und <strong>nur mit anonymisieren
-                                Tracking Daten</strong> (anonymisierte IP, Pseudonyme, ohne Cookies).</p>
+                        <p>Zudem nutzen wir die Dienste von PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA („PostHog“) zur Optimierung unserer Webseite.</p>
 
-                        <p>Die Einbindung von Matomo erfolgt dabei gemäß Art. 6 Abs. 1 f) DSGVO auf Grundlage unseres
-                            berechtigten Interesses an der statistischen Analyse des Nutzerverhaltens zu Optimierungs-
-                            und Marketingzwecken.</p>
+                        <p>Die Einbindung von PostHog erfolgt dabei gemäß Art. 6 Abs. 1 f) DSGVO auf Grundlage unseres berechtigten Interesses an der statistischen Analyse des Nutzerverhaltens zu Optimierungs- und Marketingzwecken und nur mit anonymisieren Tracking Daten (anonymisierte IP, Pseudonyme, ohne Cookies).</p>
+                        
+                        <p>PostHog überträgt und speichert die Daten ausschließlich auf Servern in der EU, ist aber ein US-Unternehmen. Wir haben mit PostHog einen Vertrag zur Auftragsverarbeitung geschlossen, der die von der EU-Kommission genehmigten und mit den nach Art. 28 DSGVO für Deutschland erforderlichen Zusätzen versehenen Standardvertragsklauseln enthält.</p>
+                        
+                        <p>Weitere Informationen zu den Nutzungsbedingungen von PostHog und den datenschutzrechtlichen Regelungen finden Sie hier: <a href="https://posthog.com/privacy">Link</a></p>
 
                         <p>Diese Webseite verwendet keine Cookies und keine Social Media Plugins.</p>
 
