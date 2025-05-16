@@ -46,6 +46,15 @@
 
 <body class="bg-gray-900 font-body text-white" onload="entschwurbel()">
 
+    <script type="text/javascript">
+            (function (window, document, dataLayerName, id) {
+                window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+                var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+                tags.async = !0, tags.src = "https://kmnrn.containers.piwik.pro/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+                !function (a, n, i) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }) } }(i[c]) }(window, "ppms", ["tm", "cm"]);
+            })(window, document, 'dataLayer', '8066e76a-9346-421b-ad9c-3e233a485287');
+    </script>
+
     <header class="md:fixed top-5 md:top-40 w-full md:h-4/6">
         <div class="flex py-5 md:py-16 items-center lg:w-4/5 px-5 lg:px-0 max-w-7xl mx-auto">
             <nav class="border-r-8 md:border-r-[15px] border-orange mr-10 pr-10 xl:mr-40 xl:pr-40 md:w-48">
