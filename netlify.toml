@@ -39,3 +39,11 @@
   host = "eu.i.posthog.com"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/cmlog/*"
+  to = "https://cbetuapktozfhxodwzfb.supabase.co/functions/v1/log-consent"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+  signed = "CONSENT_PROXY_SECRET"
