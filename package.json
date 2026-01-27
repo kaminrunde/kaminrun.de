@@ -14,7 +14,8 @@
     "cookieconsent": "^3.1.0",
     "parcel": "^2.8.3",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6"
+    "tailwindcss": "^3.2.6",
+    "vanilla-cookieconsent": "^3.1.0"
   },
   "repository": {
     "type": "git",
