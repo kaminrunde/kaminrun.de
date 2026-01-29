@@ -1,0 +1,16 @@
+#cc-main {
+    /** Change font **/
+    --cc-font-family: Bitter;
+
+    /** Change button primary color to black **/
+    --cc-btn-primary-bg: #ff6900;
+    --cc-btn-primary-border-color: #ff6900;
+    --cc-btn-primary-hover-bg: #ff6900;
+    --cc-btn-primary-hover-border-color: #ff6900;
+
+    /** Also make toggles the same color as the button **/
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+    /** Make the buttons a bit rounder **/
+    --cc-btn-border-radius: 10px;
+}
