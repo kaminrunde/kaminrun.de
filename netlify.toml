@@ -3,6 +3,9 @@
   command = "npm run build"
   publish = "./dist/"
 
+[context.production.environment]
+  POSTHOG_KEY = "phc_hLKODaQSmBT3v9ZSSVPRcYY19bmqQVwfwc8UAXY2ukP"
+
 [[headers]]
   for = "/*"
   [headers.values]

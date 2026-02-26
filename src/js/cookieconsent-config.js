@@ -9,7 +9,7 @@ function initPostHog() {
     const config = window.__posthogConfig;
     if (!config || !window.posthog) return;
 
-    window.posthog.init(config.posthog_key, config);
+    window.posthog.init(process.env.POSTHOG_KEY, config);
 }
 
 function handleAnalyticsConsent() {
