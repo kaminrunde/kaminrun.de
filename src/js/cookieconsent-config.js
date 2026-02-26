@@ -1,5 +1,23 @@
 import * as CookieConsent from 'vanilla-cookieconsent';
 
+let posthogInitialized = false;
+
+function initPostHog() {
+    if (posthogInitialized) return;
+    posthogInitialized = true;
+
+    const config = window.__posthogConfig;
+    if (!config || !window.posthog) return;
+
+    window.posthog.init(config.posthog_key, config);
+}
+
+function handleAnalyticsConsent() {
+    if (CookieConsent.acceptedCategory('analytics')) {
+        initPostHog();
+    }
+}
+
 function logConsent(action) {
     const cookie = CookieConsent.getCookie();
     const preferences = CookieConsent.getUserPreferences();
@@ -90,12 +108,15 @@ window.addEventListener('load', function () {
         },
         onFirstConsent: () => {
             logConsent('first_consent');
+            handleAnalyticsConsent();
         },
         onChange: () => {
             logConsent('change');
+            handleAnalyticsConsent();
         },
         onConsent: () => {
             logConsent('consent');
+            handleAnalyticsConsent();
         },
     });
 });
